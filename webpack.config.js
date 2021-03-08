@@ -39,8 +39,16 @@ module.exports = {
                         //     ],
                         // }
                     }
-            }
+            },
+            {
+              test: /\.tsx?$/,
+              use: 'ts-loader',
+              exclude: /node_modules/,
+            },
         ]
+    },
+    resolve: {
+      extensions: ['.tsx', '.ts', '.js'],
     },
     plugins: [
         new CleanWebpackPlugin(), // 请空之前打包的内容
